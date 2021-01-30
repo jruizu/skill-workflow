@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skill Colaborative</title>
-<style>
-    .container{
-       
-        padding-left: 15pt;
-        padding-right: 15pt;
-    }
-    .box{
-        height: 200px;
-        border:1px solid;
-        padding: 10pt;
-      
-    }
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Skill Colaborative</h1>
         <div class="box">
             <p>By Jose Ruiz Urango</p>
+            <br>
+            <span>Prueba tu suerte, genera el numero de tu loteria</span>
+            <h2 id="numberLot"></h2>
         </div>
+        <button class="button-primary" id="getNumber">Obten numero</button>
+
     </div>
 </body>
+<script>
+    
+    document.getElementById("getNumber").addEventListener('click', ()=>{
+        let numberLot = '';
+        for(let i=0; i<4; i++){
+            numberLot += `${random(0,9)}`
+        }
+        document.getElementById("numberLot").innerHTML = numberLot
+    });
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+</script>
 </html>

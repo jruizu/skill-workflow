@@ -1,0 +1,25 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+       
+    padding-left: 15pt;
+    padding-right: 15pt;
+}
+.box{
+    height: 200px;
+    border:1px solid;
+    padding: 10pt;
+  
+}
+span{
+    color: brown;
+    font-size: 14px;
+}
+.button-primary{
+    margin-top: 4pt;
+    background-color: teal;
+    color: #ffff;
+    padding: 3pt;
+    border-radius: 6px;
+}
