@@ -14,6 +14,7 @@
             <br>
             <span>Prueba tu suerte, genera el numero de tu loteria</span>
             <h2 id="numberLot"></h2>
+            <h2 id="baloto"></h2>
         </div>
         <button class="button-primary" id="getNumber">Obten numero</button>
 
@@ -23,10 +24,16 @@
     
     document.getElementById("getNumber").addEventListener('click', ()=>{
         let numberLot = '';
+        let numberBalot = '';
         for(let i=0; i<4; i++){
             numberLot += `${random(0,9)}`
         }
-        document.getElementById("numberLot").innerHTML = numberLot
+        for(let i=0; i<10; i++){
+            numberBalot += `${random(0,9)}`
+            if(i%2!=0) numberBalot +='-'
+        }
+        document.getElementById("numberLot").innerHTML = 'Loteria: ' +numberLot
+        document.getElementById("baloto").innerHTML = 'Baloto: '+numberBalot
     });
     function random(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
